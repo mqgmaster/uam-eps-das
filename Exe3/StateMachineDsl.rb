@@ -9,6 +9,7 @@ class StateMachineDsl
   end
   
   def self.event(name)
+    #only for friendly representation of DSL. This entity is not required.
   end
   
   def self.state(name)
