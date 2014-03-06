@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension-point id="es.uam.eps.das.exe4.tipsource" name="Source de tips" schema="schema/es.uam.eps.das.exe4.tipsource.exsd"/>
    <extension
          point="org.eclipse.ui.commands">
       <category
@@ -10,7 +11,7 @@
       <command
             categoryId="es.uam.eps.das.exe4.commands.category"
             id="es.uam.eps.das.exe4.commands.tipExecute"
-            name="Tip command">
+            name="Get the tip of the day">
       </command>
    </extension>
    <extension
@@ -35,7 +36,7 @@
             locationURI="menu:org.eclipse.ui.main.menu?after=additions">
          <menu
                id="es.uam.eps.das.exe4.menus.sampleMenu"
-               label="Sample Menu"
+               label="Tips"
                mnemonic="M">
             <command
                   commandId="es.uam.eps.das.exe4.commands.tipExecute"
@@ -52,7 +53,7 @@
                   commandId="es.uam.eps.das.exe4.commands.tipExecute"
                   icon="icons/sample.gif"
                   id="es.uam.eps.das.exe4.toolbars.sampleCommand"
-                  tooltip="Say hello world">
+                  tooltip="Get the tip of the day">
             </command>
          </toolbar>
       </menuContribution>
