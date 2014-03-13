@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="orders.Orders.presentation.OrdersModelWizardID"
+            name="%_UI_OrdersModelWizard_label"
+            class="orders.Orders.presentation.OrdersModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/OrdersModelFile.gif">
+         <description>%_UI_OrdersModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="orders.Orders.presentation.OrdersEditorID"
+            name="%_UI_OrdersEditor_label"
+            icon="icons/full/obj16/OrdersModelFile.gif"
+            extensions="orders"
+            class="orders.Orders.presentation.OrdersEditor"
+            contributorClass="orders.Orders.presentation.OrdersActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
